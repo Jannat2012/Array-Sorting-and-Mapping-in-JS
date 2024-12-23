@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<style>
+	button{
+		background-color: deepskyblue;
+		color: deepblue;
+		font-weight: bold;
+	}
+</style>
+<title>JavaScript </title>
+
+</head>
+
+<body>
+<p>Click buttons to sort the array.</p>
+<button onclick="asending()">Asending Order</button>
+<button onclick="Descending()">Descending Order</button>
+<p id="demo1"> </p>
+
+<p>Multiply Every element in the array with '5':</p>
+<p id="array_value"></p>
+
+<p>Multiply Every element in the array with '5':</p>
+<button onclick="evalFunction()">Try it</button>
+<p id="result"></p>
+<script>
+var array=[19,50,100,95,85,40,20,10];
+document.getElementById("demo1").innerHTML=array;
+function asending(){
+	array.sort(function(a,b){return a-b});
+	document.getElementById("demo1").innerHTML=array;
+}
+
+function descending(){
+	array.sort(function(a,b){return b-a});
+	document.getElementById("demo1").innerHTML=array;
+}
+
+var numbers=[19,50,100,95,85,40,20,10];
+function valueDeclaration(num) {
+	return num*5;
+}
+var newarray= numbers.map(valueDeclaration);
+document.getElementById("array_value").innerHTML=newarray;
+function evalFunction(){
+	var a=100;
+	var b=200;
+	var x=eval("a+b")+"<br>";
+	var y=eval("5*8")+"<br>";
+	var z=eval("b-a")+"<br>";
+
+
+var res=x+y+z;
+document.getElementById("result").innerHTML=res;
+}
+</script>
+</body>
+
+</html>
